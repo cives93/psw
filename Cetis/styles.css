@@ -903,7 +903,22 @@ footer {
   background: linear-gradient(to bottom, transparent, var(--abyssal));
 }
 .depth-abyssal::after {
-  background: linear-gradient(to bottom, transparent, var(--hadal));
+  background: linear-gradient(to bottom, transparent, #010509);
+  height: 200px;
+}
+
+/* Trench top-fade — blend incoming from abyssal */
+.depth-hadal::before,
+.cta-footer-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, var(--abyssal), transparent);
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* ── OCEAN DEPTH ZONES ── */
@@ -1084,6 +1099,140 @@ footer {
   background: var(--cyan);
   box-shadow: 0 0 0 3px rgba(0, 229, 200, 0.2);
   transform: scale(1.25);
+}
+
+/* ── WATER SWIPE PAGE TRANSITION ── */
+.page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  pointer-events: none;
+  overflow: hidden;
+}
+.page-transition.active { pointer-events: all; }
+
+/* The water wall */
+.water-wall {
+  position: absolute;
+  top: -5%;
+  width: 120%;
+  height: 110%;
+  background: linear-gradient(
+    135deg,
+    var(--midnight) 0%,
+    var(--abyss) 30%,
+    var(--deep) 60%,
+    var(--midnight) 100%
+  );
+  transform: translateX(-110%);
+  will-change: transform;
+}
+.water-wall::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -40px;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(to right,
+    rgba(0, 229, 200, 0.06),
+    rgba(0, 229, 200, 0.12),
+    rgba(34, 211, 238, 0.08),
+    rgba(0, 229, 200, 0.04),
+    transparent
+  );
+  filter: blur(4px);
+}
+.water-wall::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -8px;
+  width: 16px;
+  height: 100%;
+  background: linear-gradient(to right,
+    rgba(0, 229, 200, 0.2),
+    rgba(0, 229, 200, 0.05),
+    transparent
+  );
+}
+
+/* Bubble particles inside the transition */
+.water-wall .transition-bubble {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  background: radial-gradient(circle at 30% 30%, rgba(34, 211, 238, 0.1), transparent);
+}
+
+/* Swipe directions */
+.page-transition.swipe-right .water-wall {
+  transform: translateX(-110%);
+  animation: waterSwipeRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.page-transition.swipe-left .water-wall {
+  left: auto;
+  right: 0;
+  transform: translateX(110%);
+  animation: waterSwipeLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.page-transition.swipe-left .water-wall::before,
+.page-transition.swipe-left .water-wall::after {
+  right: auto;
+  left: -40px;
+  background: linear-gradient(to left,
+    rgba(0, 229, 200, 0.06),
+    rgba(0, 229, 200, 0.12),
+    rgba(34, 211, 238, 0.08),
+    rgba(0, 229, 200, 0.04),
+    transparent
+  );
+}
+.page-transition.swipe-left .water-wall::after {
+  left: -8px;
+  width: 16px;
+  background: linear-gradient(to left,
+    rgba(0, 229, 200, 0.2),
+    rgba(0, 229, 200, 0.05),
+    transparent
+  );
+}
+
+@keyframes waterSwipeRight {
+  0% { transform: translateX(-110%); }
+  45% { transform: translateX(0%); }
+  55% { transform: translateX(0%); }
+  100% { transform: translateX(110%); }
+}
+@keyframes waterSwipeLeft {
+  0% { transform: translateX(110%); }
+  45% { transform: translateX(0%); }
+  55% { transform: translateX(0%); }
+  100% { transform: translateX(-110%); }
+}
+
+/* Page content fade during transition */
+body.transitioning .snap-container,
+body.transitioning > :not(.page-transition):not(nav) {
+  animation: contentFade 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+@keyframes contentFade {
+  0% { opacity: 1; }
+  30% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Entrance animation when arriving on a page */
+body.page-enter .snap-container,
+body.page-enter > :not(.page-transition):not(nav) {
+  animation: contentEnter 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes contentEnter {
+  0% { opacity: 0; transform: translateX(30px); }
+  100% { opacity: 1; transform: translateX(0); }
 }
 
 /* ── RESPONSIVE ── */
