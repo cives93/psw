@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CETIS – Comprehensive Environmental Toxicity Information System | Tidepool Scientific</title>
+  <meta name="description" content="CETIS is a professional-level toxicity data analysis and database application for environmental toxicology. Developed by Tidepool Scientific Software.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Top Banner -->
+<div class="banner">
+  CETIS Enterprise is coming — SQL Server &amp; Azure SQL support for hundreds of simultaneous users.
+  <a href="CetisNewsAndUpdates.html">Learn more &rarr;</a>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__brand">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="18" cy="18" r="18" fill="#0c2d48"/>
+        <path d="M10 24c2-4 5-12 8-12s4 6 6 4 3-6 3-6" stroke="#4db6f5" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <circle cx="10" cy="24" r="2" fill="#26a69a"/>
+        <circle cx="18" cy="12" r="2" fill="#26a69a"/>
+        <circle cx="27" cy="10" r="2" fill="#26a69a"/>
+      </svg>
+      CETIS <span>by Tidepool</span>
+    </a>
+    <button class="navbar__toggle" onclick="document.querySelector('.navbar__links').classList.toggle('open')" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <ul class="navbar__links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="AboutCetis.html">About</a></li>
+      <li><a href="cetisfeatures.html">Features</a></li>
+      <li><a href="cetisstats.html">Statistics</a></li>
+      <li><a href="cetisfaq.html">FAQ</a></li>
+      <li><a href="CetisNewsAndUpdates.html">Updates</a></li>
+      <li><a href="CetisTestimonials.html">Testimonials</a></li>
+      <li><a href="CetisClientList.html">Clients</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1 class="animate-in">Introducing CETIS</h1>
+    <p class="animate-in">The <strong>Comprehensive Environmental Toxicity Information System</strong> &mdash; a professional-level toxicity data analysis and database application designed to thoroughly analyze, maintain, and organize complex environmental toxicity data.</p>
+    <div class="btn-group animate-in">
+      <a href="AboutCetis.html" class="btn btn--primary">Explore CETIS</a>
+      <a href="cetisfeatures.html" class="btn btn--outline">View Features</a>
+    </div>
+    <div class="hero__badges animate-in">
+      <span class="badge">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 110 16A8 8 0 018 0zm3.5 5.5l-5 5L4 8"/></svg>
+        Microsoft Access Based
+      </span>
+      <span class="badge">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 110 16A8 8 0 018 0zm3.5 5.5l-5 5L4 8"/></svg>
+        64-bit Compatible
+      </span>
+      <span class="badge">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 110 16A8 8 0 018 0zm3.5 5.5l-5 5L4 8"/></svg>
+        Multi-User Network
+      </span>
+      <span class="badge">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 110 16A8 8 0 018 0zm3.5 5.5l-5 5L4 8"/></svg>
+        v2.1.6 Available
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="stats">
+      <div class="stat animate-in">
+        <div class="stat__number">30+</div>
+        <div class="stat__label">Years of Development</div>
+      </div>
+      <div class="stat animate-in">
+        <div class="stat__number">100+</div>
+        <div class="stat__label">Registered Users</div>
+      </div>
+      <div class="stat animate-in">
+        <div class="stat__number">41</div>
+        <div class="stat__label">Non-Linear Regression Models</div>
+      </div>
+      <div class="stat animate-in">
+        <div class="stat__number">90%</div>
+        <div class="stat__label">Time Savings vs. Traditional Tools</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What is CETIS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Overview</span>
+      <h2>What is CETIS?</h2>
+      <p>A Microsoft Access&ndash;based application built by environmental toxicologists, for environmental toxicologists.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card animate-in">
+        <div class="card__icon card__icon--blue">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v18h18"/><polyline points="18 9 12 15 9 12 3 18"/></svg>
+        </div>
+        <h3>Data Analysis</h3>
+        <p>Full suite of advanced statistical methods for hypothesis testing and point estimation, including probit analysis, non-linear regression with 41 models, and EPA-approved methods.</p>
+      </div>
+      <div class="card animate-in">
+        <div class="card__icon card__icon--teal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3>Database Management</h3>
+        <p>Efficiently stores and processes data from freshwater, estuarine, marine, and terrestrial toxicity tests on effluents, ambient water, reference toxicants, and sediment samples.</p>
+      </div>
+      <div class="card animate-in">
+        <div class="card__icon card__icon--green">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Decision-Tree Automation</h3>
+        <p>Automated analyses using customizable decision-tree logic consistent with U.S. EPA, Environment Canada, and other regulatory authorities. Override any decision manually at will.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Who Uses CETIS -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Audience</span>
+      <h2>Who Uses CETIS?</h2>
+    </div>
+    <div class="grid-4">
+      <div class="card animate-in">
+        <h4>Commercial Labs</h4>
+        <p>Environmental toxicity testing laboratories relying on CETIS for daily operations and reporting.</p>
+      </div>
+      <div class="card animate-in">
+        <h4>Research Institutions</h4>
+        <p>Universities and research organizations conducting environmental toxicology studies.</p>
+      </div>
+      <div class="card animate-in">
+        <h4>Regulatory Agencies</h4>
+        <p>Federal and state agencies administering Whole Effluent Toxicity (WET) programs.</p>
+      </div>
+      <div class="card animate-in">
+        <h4>Consulting Firms</h4>
+        <p>Environmental consultants needing reliable statistical analysis and reporting tools.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Productivity -->
+<section class="section">
+  <div class="container">
+    <div class="feature-row">
+      <div>
+        <span class="section-label">Productivity</span>
+        <h2>Dramatically Reduce Analysis Time</h2>
+        <p>Labs report that CETIS requires <strong>less than one-tenth the time</strong> to input and analyze toxicity data compared to traditional software solutions.</p>
+        <p>Assuming a lab processing 500 samples per year and technician costs of $30/hr, this can represent an <strong>annual savings of $15,000</strong> or more.</p>
+        <ul class="feature-list mt-4">
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg>
+            Pop-up calendars, calculators &amp; rapid data entry
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg>
+            Automated decision-tree logic for consistent results
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg>
+            WET Evaluation reports with IWC compliance
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg>
+            Quality control plots: Levey-Jennings, Cumulative Mean &amp; CUSUM
+          </li>
+        </ul>
+      </div>
+      <div style="background: linear-gradient(135deg, var(--blue-100), var(--teal-100)); border-radius: var(--radius-xl); padding: var(--sp-10); display: flex; align-items: center; justify-content: center; min-height: 320px;">
+        <div style="text-align: center;">
+          <div style="font-size: 4rem; font-weight: 800; color: var(--blue-800); font-family: var(--font-display);">10&times;</div>
+          <div style="font-size: 1.3rem; color: var(--teal-700); font-weight: 600;">Faster Than<br>Traditional Methods</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Architecture -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label" style="color: var(--teal-500);">Architecture</span>
+      <h2>Built for Multi-User Environments</h2>
+      <p style="color: rgba(255,255,255,.7);">CETIS uses a file-server architecture with split front-end/back-end databases, allowing simultaneous multi-user access.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card animate-in" style="background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.1);">
+        <h3 style="color: var(--blue-400);">Front-End</h3>
+        <p style="color: rgba(255,255,255,.7);">Installed on each workstation, providing the user interface and analytical tools.</p>
+      </div>
+      <div class="card animate-in" style="background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.1);">
+        <h3 style="color: var(--blue-400);">Back-End Database</h3>
+        <p style="color: rgba(255,255,255,.7);">Installed on a shared server drive, serving as the main data repository for all users.</p>
+      </div>
+      <div class="card animate-in" style="background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.1);">
+        <h3 style="color: var(--blue-400);">Data Security</h3>
+        <p style="color: rgba(255,255,255,.7);">MD5 hash digests ensure data integrity and security across all stored datasets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta">
+      <h2>Ready to Modernize Your Toxicity Data Workflow?</h2>
+      <p>Join over 100 laboratories, agencies, and research institutions already using CETIS.</p>
+      <div class="btn-group">
+        <a href="cetisfeatures.html" class="btn btn--primary">Explore Features</a>
+        <a href="CetisTestimonials.html" class="btn btn--outline">Read Testimonials</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">CETIS <span>by Tidepool</span></div>
+        <p style="font-size:.9rem; max-width:300px;">Since 1992, Tidepool Scientific Software has been committed to developing biostatistical software for the environmental toxicology community.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="AboutCetis.html">About CETIS</a></li>
+          <li><a href="cetisfeatures.html">Features</a></li>
+          <li><a href="cetisstats.html">Statistical Methods</a></li>
+          <li><a href="CetisNewsAndUpdates.html">News &amp; Updates</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="cetisfaq.html">FAQ</a></li>
+          <li><a href="CetisTestimonials.html">Testimonials</a></li>
+          <li><a href="CetisClientList.html">Client List</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://tidepool-scientific.com/About/">About Tidepool</a></li>
+          <li><a href="https://tidepool-scientific.com/">Tidepool Home</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <span>&copy; 2025 Tidepool Scientific Software, LLC. McKinleyville, CA.</span>
+      <span>CETIS v2.1.6</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Sticky navbar shadow
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
+});
+// Scroll-triggered animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.style.animationPlayState = 'running'; }});
+}, { threshold: 0.15 });
+document.querySelectorAll('.animate-in').forEach(el => {
+  el.style.animationPlayState = 'paused';
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>

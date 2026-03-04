@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CETIS Statistical Methods | Tidepool Scientific</title>
+  <meta name="description" content="CETIS provides a full suite of advanced statistical methods for hypothesis testing and point estimation in environmental toxicology.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__brand">
+      <svg viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="18" fill="#0c2d48"/><path d="M10 24c2-4 5-12 8-12s4 6 6 4 3-6 3-6" stroke="#4db6f5" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="10" cy="24" r="2" fill="#26a69a"/><circle cx="18" cy="12" r="2" fill="#26a69a"/><circle cx="27" cy="10" r="2" fill="#26a69a"/></svg>
+      CETIS <span>by Tidepool</span>
+    </a>
+    <button class="navbar__toggle" onclick="document.querySelector('.navbar__links').classList.toggle('open')" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <ul class="navbar__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="AboutCetis.html">About</a></li>
+      <li><a href="cetisfeatures.html">Features</a></li>
+      <li><a href="cetisstats.html" class="active">Statistics</a></li>
+      <li><a href="cetisfaq.html">FAQ</a></li>
+      <li><a href="CetisNewsAndUpdates.html">Updates</a></li>
+      <li><a href="CetisTestimonials.html">Testimonials</a></li>
+      <li><a href="CetisClientList.html">Clients</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero hero--compact">
+  <div class="container">
+    <span class="section-label" style="color: var(--teal-500);">Statistics</span>
+    <h1>Statistical Methods</h1>
+    <p>A full suite of advanced methods for hypothesis testing and point estimation in environmental toxicology.</p>
+  </div>
+</section>
+
+<!-- Overview -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Overview</span>
+      <h2>Two Pillars of Analysis</h2>
+      <p>CETIS provides comprehensive statistical tools organized around two core analytical approaches.</p>
+    </div>
+    <div class="grid-2">
+      <div class="card animate-in">
+        <div class="card__icon card__icon--blue">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><rect x="7" y="10" width="3" height="8" rx="1"/><rect x="14" y="6" width="3" height="12" rx="1"/></svg>
+        </div>
+        <h3>Hypothesis Testing</h3>
+        <p>Determine NOEL/LOEL (NOEC/LOEC) values through parametric and non-parametric statistical comparisons between control and treatment groups.</p>
+      </div>
+      <div class="card animate-in">
+        <div class="card__icon card__icon--teal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 5 5-9"/></svg>
+        </div>
+        <h3>Point Estimation</h3>
+        <p>Calculate EC/LC/IC values with confidence intervals through linear and non-linear regression models, including Spearman-Karber, Trimmed Spearman-Karber, and more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Linear Regression -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Regression</span>
+      <h2>Linear Regression (MLE)</h2>
+      <p>Four models emulating U.S. EPA Probit software and SAS Probit procedures.</p>
+    </div>
+    <div class="card" style="max-width: 800px; margin: 0 auto; overflow-x: auto;">
+      <table class="methods-table">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Log-Cumulative Normal</strong></td>
+            <td>Probit Analysis &mdash; the classic approach for dose-response modeling</td>
+          </tr>
+          <tr>
+            <td><strong>Log-Logit</strong></td>
+            <td>Logistic transformation for symmetric dose-response curves</td>
+          </tr>
+          <tr>
+            <td><strong>Log-Gompertz</strong></td>
+            <td>Asymmetric model for skewed dose-response relationships</td>
+          </tr>
+          <tr>
+            <td><strong>Log-Angle</strong></td>
+            <td>Angular transformation for proportion-based endpoints</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Non-Linear Regression -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Advanced</span>
+      <h2>Non-Linear Regression</h2>
+      <p>41 different models for comprehensive dose-response characterization.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card animate-in">
+        <h4>Logistic Models</h4>
+        <ul class="feature-list">
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> Logistic (2, 3, 4 parameter)</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> Log-Logistic</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> Log-Logistic with hormesis</li>
+        </ul>
+      </div>
+      <div class="card animate-in">
+        <h4>Distribution Models</h4>
+        <ul class="feature-list">
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> Cumulative Normal</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> Gompertz</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> Weibull</li>
+        </ul>
+      </div>
+      <div class="card animate-in">
+        <h4>Specialty Models</h4>
+        <ul class="feature-list">
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> Morgan-Mercer-Flodin</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> Hormesis-adjusted models</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg> And 30+ more models</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Residual & Auxiliary Tests -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Diagnostics</span>
+      <h2>Residual Analysis &amp; Auxiliary Tests</h2>
+      <p>Thorough model diagnostics to ensure appropriate model selection.</p>
+    </div>
+    <div class="card" style="max-width: 800px; margin: 0 auto; overflow-x: auto;">
+      <table class="methods-table">
+        <thead>
+          <tr>
+            <th>Test</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Pearson Chi-Square</strong></td><td>Goodness-of-fit assessment</td></tr>
+          <tr><td><strong>Likelihood Ratio</strong></td><td>Model comparison and fit evaluation</td></tr>
+          <tr><td><strong>ANOVA Lack of Fit</strong></td><td>Assess systematic departure from the model</td></tr>
+          <tr><td><strong>Shapiro-Wilk</strong></td><td>Test for normality of residuals</td></tr>
+          <tr><td><strong>Anderson-Darling</strong></td><td>Sensitive normality test for distribution tails</td></tr>
+          <tr><td><strong>Bartlett Test</strong></td><td>Homogeneity of variances (parametric)</td></tr>
+          <tr><td><strong>Brown-Forsythe Levene</strong></td><td>Robust homogeneity of variances test</td></tr>
+          <tr><td><strong>Grubbs Test</strong></td><td>Detection of outliers</td></tr>
+          <tr><td><strong>Mann-Kendall Trend</strong></td><td>Detect monotonic trends in data</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Special Methods -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Special</span>
+      <h2>Additional Methods</h2>
+    </div>
+    <div class="grid-2">
+      <div class="card animate-in">
+        <h3>EPA TST Method</h3>
+        <p>The U.S. EPA Test for Significant Toxicity (TST) using Welch's t Test &mdash; a bioequivalence approach that controls the false negative rate for more reliable toxicity determinations.</p>
+      </div>
+      <div class="card animate-in">
+        <h3>Ratio &amp; Comparison Tests</h3>
+        <p>Robertson and Preisler ratio test and the Zajdlik two-sample Z test for comparing two different point estimates with statistical rigor.</p>
+      </div>
+      <div class="card animate-in">
+        <h3>Spearman-Karber Method</h3>
+        <p>LC50/EC50 estimates with 95% confidence intervals, including the Trimmed Spearman-Karber variant for improved robustness.</p>
+      </div>
+      <div class="card animate-in">
+        <h3>NOEL/LOEL Calculations</h3>
+        <p>Both NOEL/LOEL (NOEC/LOEC) calculations can be immediately followed by automated point estimate calculations for a complete analytical workflow.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="cta">
+      <h2>Have Questions?</h2>
+      <p>Check out our frequently asked questions or explore the full feature set.</p>
+      <div class="btn-group">
+        <a href="cetisfaq.html" class="btn btn--primary">View FAQ</a>
+        <a href="cetisfeatures.html" class="btn btn--outline">All Features</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">CETIS <span>by Tidepool</span></div>
+        <p style="font-size:.9rem; max-width:300px;">Since 1992, Tidepool Scientific Software has been committed to developing biostatistical software for the environmental toxicology community.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="AboutCetis.html">About CETIS</a></li>
+          <li><a href="cetisfeatures.html">Features</a></li>
+          <li><a href="cetisstats.html">Statistical Methods</a></li>
+          <li><a href="CetisNewsAndUpdates.html">News &amp; Updates</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="cetisfaq.html">FAQ</a></li>
+          <li><a href="CetisTestimonials.html">Testimonials</a></li>
+          <li><a href="CetisClientList.html">Client List</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://tidepool-scientific.com/About/">About Tidepool</a></li>
+          <li><a href="https://tidepool-scientific.com/">Tidepool Home</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <span>&copy; 2025 Tidepool Scientific Software, LLC. McKinleyville, CA.</span>
+      <span>CETIS v2.1.6</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
+});
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.style.animationPlayState = 'running'; });
+}, { threshold: 0.15 });
+document.querySelectorAll('.animate-in').forEach(el => {
+  el.style.animationPlayState = 'paused';
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>

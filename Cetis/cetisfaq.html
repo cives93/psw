@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CETIS FAQ | Tidepool Scientific</title>
+  <meta name="description" content="Frequently asked questions about CETIS environmental toxicity software by Tidepool Scientific.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__brand">
+      <svg viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="18" fill="#0c2d48"/><path d="M10 24c2-4 5-12 8-12s4 6 6 4 3-6 3-6" stroke="#4db6f5" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="10" cy="24" r="2" fill="#26a69a"/><circle cx="18" cy="12" r="2" fill="#26a69a"/><circle cx="27" cy="10" r="2" fill="#26a69a"/></svg>
+      CETIS <span>by Tidepool</span>
+    </a>
+    <button class="navbar__toggle" onclick="document.querySelector('.navbar__links').classList.toggle('open')" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <ul class="navbar__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="AboutCetis.html">About</a></li>
+      <li><a href="cetisfeatures.html">Features</a></li>
+      <li><a href="cetisstats.html">Statistics</a></li>
+      <li><a href="cetisfaq.html" class="active">FAQ</a></li>
+      <li><a href="CetisNewsAndUpdates.html">Updates</a></li>
+      <li><a href="CetisTestimonials.html">Testimonials</a></li>
+      <li><a href="CetisClientList.html">Clients</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero hero--compact">
+  <div class="container">
+    <span class="section-label" style="color: var(--teal-500);">Support</span>
+    <h1>Frequently Asked Questions</h1>
+    <p>Find answers to the most common questions about CETIS.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container" style="max-width: 800px;">
+
+    <div class="section-header">
+      <span class="section-label">General</span>
+      <h2>General Questions</h2>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        What is CETIS?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer__inner">
+          <p>CETIS (Comprehensive Environmental Toxicity Information System) is a professional-level toxicity data analysis and database application developed by Tidepool Scientific, LLC. It is a Microsoft Access&ndash;based application designed to thoroughly analyze, maintain, and organize complex and heterogeneous environmental toxicity data.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Do I need to know SQL to use CETIS?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer__inner">
+          <p>You will need to know almost nothing of the Structured Query Language (SQL) because CETIS does all the work for you behind the scenes. Although you will need to know very little of the Access application to successfully use CETIS, the more you learn about Access, the more you can apply to using CETIS.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        What is the relationship between ToxCalc and CETIS?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer__inner">
+          <p>ToxCalc was the original spreadsheet-based toxicity analysis application developed by Tidepool Scientific, which became the best-selling software of its kind with over 500 registered users. CETIS is its successor &mdash; a full database application built on the Microsoft Access platform that provides far more comprehensive data management, analysis, and reporting capabilities.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        What types of toxicity tests does CETIS support?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer__inner">
+          <p>CETIS efficiently stores and processes data derived from freshwater, estuarine, marine, and terrestrial toxicity tests performed on various environmental media such as effluents, ambient water, reference toxicants, and sediment samples or preparations. It is also easily adapted to toxicity tests performed on other environmental media such as soils or aerosols.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header mt-8">
+      <span class="section-label">Analysis</span>
+      <h2>Data Analysis</h2>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        How does CETIS help me analyze my data correctly?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer__inner">
+          <p>The decision flowcharts that must be followed during the analysis of toxicity data can be complicated and at times overwhelming. CETIS implements decision-making logic that makes most, if not all, decisions for you in terms of selecting the correct method and verifying that all assumptions are met. You can also override any software-made decision and manually select methods and options of your choice.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Does CETIS support different regulatory jurisdictions?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer__inner">
+          <p>Yes. Since many federal and state government programs have different decision-making rules guiding the selection of the appropriate statistical methods, CETIS has a system to quickly change the decision rules depending on which jurisdiction governs the testing. This multi-jurisdictional support allows labs to efficiently handle samples governed by different regulatory frameworks.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        What statistical methods does CETIS provide?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer__inner">
+          <p>CETIS offers a full suite of advanced statistical methods for hypothesis testing and point estimation. This includes linear regression with 4 MLE models (Probit, Logit, Gompertz, Angle), non-linear regression with 41 models, the U.S. EPA TST method, Spearman-Karber, and comprehensive residual analysis tests. See our <a href="cetisstats.html">Statistical Methods</a> page for full details.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header mt-8">
+      <span class="section-label">Technical</span>
+      <h2>Technical Questions</h2>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        What versions of Microsoft Access are supported?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer__inner">
+          <p>CETIS now runs on Microsoft Access 2010, 2013, 2016, 2019, 2021, and Microsoft 365 &mdash; both x64 and x86 versions. Version 2.1 introduced full 64-bit compatibility.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Can multiple users access CETIS simultaneously?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer__inner">
+          <p>Yes. CETIS was designed as a split database application using a file-server architecture. The front-end application is installed on each workstation and the back-end database is installed on a shared drive such as a server, allowing for simultaneous use of the back-end database by multiple users.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        What about licensing and activation?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer__inner">
+          <p>CETIS v2.1.3.0 and later uses TLS 1.2 for license server communication, supporting both online and offline activation or deactivation through a Soraco-designed wizard. A standalone QLM Wizard is also available, and a Self-Help Portal has been added under the Support menu on the website. If your purchase was less than one year ago, you are entitled to a free update.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        What is CETIS Enterprise?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer__inner">
+          <p>CETIS Enterprise is the next-generation version currently in development. It will support hundreds of simultaneous users, millions of records, and remote access, while implementing mission-critical database management. The new version will use various editions of SQL Server and even Azure SQL, enabling cloud-based deployments.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="cta">
+      <h2>Still Have Questions?</h2>
+      <p>Explore our features or see what our users have to say about CETIS.</p>
+      <div class="btn-group">
+        <a href="cetisfeatures.html" class="btn btn--primary">View Features</a>
+        <a href="CetisTestimonials.html" class="btn btn--outline">Testimonials</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">CETIS <span>by Tidepool</span></div>
+        <p style="font-size:.9rem; max-width:300px;">Since 1992, Tidepool Scientific Software has been committed to developing biostatistical software for the environmental toxicology community.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="AboutCetis.html">About CETIS</a></li>
+          <li><a href="cetisfeatures.html">Features</a></li>
+          <li><a href="cetisstats.html">Statistical Methods</a></li>
+          <li><a href="CetisNewsAndUpdates.html">News &amp; Updates</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="cetisfaq.html">FAQ</a></li>
+          <li><a href="CetisTestimonials.html">Testimonials</a></li>
+          <li><a href="CetisClientList.html">Client List</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://tidepool-scientific.com/About/">About Tidepool</a></li>
+          <li><a href="https://tidepool-scientific.com/">Tidepool Home</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <span>&copy; 2025 Tidepool Scientific Software, LLC. McKinleyville, CA.</span>
+      <span>CETIS v2.1.6</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
+});
+</script>
+
+</body>
+</html>
