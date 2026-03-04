@@ -41,17 +41,6 @@
   <button class="snap-dot" data-index="4" data-label="Trench"></button>
 </div>
 
-<!-- Water Swipe Page Transition -->
-<div class="page-transition" id="pageTransition">
-  <div class="water-wall">
-    <div class="transition-bubble" style="width:12px;height:12px;top:15%;right:50px"></div>
-    <div class="transition-bubble" style="width:6px;height:6px;top:40%;right:30px"></div>
-    <div class="transition-bubble" style="width:9px;height:9px;top:65%;right:60px"></div>
-    <div class="transition-bubble" style="width:5px;height:5px;top:80%;right:25px"></div>
-    <div class="transition-bubble" style="width:8px;height:8px;top:30%;right:70px"></div>
-  </div>
-</div>
-
 <!-- Snap Container -->
 <main class="snap-container" id="snapContainer">
 
@@ -479,53 +468,6 @@
     }
   });
 
-  // ── Water swipe page transition ──
-  const transition = document.getElementById('pageTransition');
-  const navOrder = [
-    'index.html', 'AboutCetis.html', 'cetisfeatures.html',
-    'cetisstats.html', 'cetisfaq.html', 'CetisNewsAndUpdates.html',
-    'CetisTestimonials.html', 'CetisClientList.html'
-  ];
-
-  function getCurrentPage() {
-    const path = window.location.pathname.split('/').pop() || 'index.html';
-    return path;
-  }
-
-  function getPageIndex(href) {
-    const page = href.split('/').pop() || 'index.html';
-    return navOrder.indexOf(page);
-  }
-
-  // Intercept nav link clicks
-  document.querySelectorAll('.nav-links a, .footer-links a').forEach(link => {
-    link.addEventListener('click', (e) => {
-      const href = link.getAttribute('href');
-      if (!href || href === '#' || href === getCurrentPage()) return;
-
-      e.preventDefault();
-
-      const currentIdx = getPageIndex(getCurrentPage());
-      const targetIdx = getPageIndex(href);
-      const direction = targetIdx > currentIdx ? 'right' : 'left';
-
-      // Trigger transition
-      document.body.classList.add('transitioning');
-      transition.classList.add('active', `swipe-${direction}`);
-
-      // Navigate after the wall covers the screen
-      setTimeout(() => {
-        window.location.href = href;
-      }, 400);
-    });
-  });
-
-  // Entrance animation on page load
-  if (!sessionStorage.getItem('noEntrance')) {
-    document.body.classList.add('page-enter');
-    setTimeout(() => document.body.classList.remove('page-enter'), 600);
-  }
-  sessionStorage.removeItem('noEntrance');
 })();
 </script>
 

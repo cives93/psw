@@ -9,18 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
-<!-- Water Swipe Page Transition -->
-<div class="page-transition" id="pageTransition">
-  <div class="water-wall">
-    <div class="transition-bubble" style="width:12px;height:12px;top:15%;right:50px"></div>
-    <div class="transition-bubble" style="width:6px;height:6px;top:40%;right:30px"></div>
-    <div class="transition-bubble" style="width:9px;height:9px;top:65%;right:60px"></div>
-    <div class="transition-bubble" style="width:5px;height:5px;top:80%;right:25px"></div>
-    <div class="transition-bubble" style="width:8px;height:8px;top:30%;right:70px"></div>
-  </div>
-</div>
+<body data-depth="col-2" class="page-enter">
 
 <!-- Nav -->
 <nav id="navbar">
@@ -287,32 +276,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// ── Water swipe page transition ──
-const pageTransition = document.getElementById('pageTransition');
-const navOrder = [
-  'index.html', 'AboutCetis.html', 'cetisfeatures.html',
-  'cetisstats.html', 'cetisfaq.html', 'CetisNewsAndUpdates.html',
-  'CetisTestimonials.html', 'CetisClientList.html'
-];
-function getCurrentPage() {
-  return window.location.pathname.split('/').pop() || 'index.html';
-}
-function getPageIndex(href) {
-  return navOrder.indexOf(href.split('/').pop() || 'index.html');
-}
-document.querySelectorAll('.nav-links a, .footer-links a').forEach(link => {
-  link.addEventListener('click', (e) => {
-    const href = link.getAttribute('href');
-    if (!href || href === '#' || href === getCurrentPage()) return;
-    e.preventDefault();
-    const direction = getPageIndex(href) > getPageIndex(getCurrentPage()) ? 'right' : 'left';
-    document.body.classList.add('transitioning');
-    pageTransition.classList.add('active', 'swipe-' + direction);
-    setTimeout(() => { window.location.href = href; }, 400);
-  });
-});
-document.body.classList.add('page-enter');
-setTimeout(() => document.body.classList.remove('page-enter'), 600);
+setTimeout(() => document.body.classList.remove('page-enter'), 500);
 </script>
 
 </body>

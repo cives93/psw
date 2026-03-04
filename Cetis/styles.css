@@ -903,11 +903,11 @@ footer {
   background: linear-gradient(to bottom, transparent, var(--abyssal));
 }
 .depth-abyssal::after {
-  background: linear-gradient(to bottom, transparent, #010509);
-  height: 200px;
+  background: linear-gradient(to bottom, transparent 0%, var(--hadal) 50%, #010509 100%);
+  height: 300px;
 }
 
-/* Trench top-fade — blend incoming from abyssal */
+/* Trench top-fade — smooth blend incoming from abyssal */
 .depth-hadal::before,
 .cta-footer-section::before {
   content: '';
@@ -915,8 +915,8 @@ footer {
   top: 0;
   left: 0;
   right: 0;
-  height: 120px;
-  background: linear-gradient(to bottom, var(--abyssal), transparent);
+  height: 200px;
+  background: linear-gradient(to bottom, var(--abyssal) 0%, var(--hadal) 40%, transparent 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -1101,138 +1101,87 @@ footer {
   transform: scale(1.25);
 }
 
-/* ── WATER SWIPE PAGE TRANSITION ── */
-.page-transition {
+/* ── OCEAN DEPTH PAGE THEME ── */
+/* Each subpage is a vertical column of ocean water.
+   Navigating between pages = moving horizontally through the ocean.
+   Each page starts near the surface at top and descends to darker depths at bottom.
+   The starting hue/depth shifts slightly per page — like being at a different
+   horizontal position in the ocean where the water is a slightly different shade. */
+
+/* Custom depth-start colors per page — subtle hue shifts for lateral feel */
+body[data-depth="col-1"] { --depth-top: #0c2644; --depth-mid: #081b35; --depth-deep: #051225; --depth-floor: #030b18; }
+body[data-depth="col-2"] { --depth-top: #0b2440; --depth-mid: #071a33; --depth-deep: #041224; --depth-floor: #020a17; }
+body[data-depth="col-3"] { --depth-top: #0a2342; --depth-mid: #071932; --depth-deep: #041123; --depth-floor: #020916; }
+body[data-depth="col-4"] { --depth-top: #0d2745; --depth-mid: #091c37; --depth-deep: #051326; --depth-floor: #030b19; }
+body[data-depth="col-5"] { --depth-top: #0b2541; --depth-mid: #071b34; --depth-deep: #041224; --depth-floor: #020a17; }
+body[data-depth="col-6"] { --depth-top: #0c2543; --depth-mid: #081a36; --depth-deep: #041225; --depth-floor: #030a18; }
+body[data-depth="col-7"] { --depth-top: #0a2240; --depth-mid: #071931; --depth-deep: #041122; --depth-floor: #020915; }
+
+/* Base background for all depth pages */
+body[data-depth] {
+  background: var(--depth-top);
+}
+
+/* Full-page vertical gradient — surface at top, deep ocean at bottom */
+body[data-depth]::after {
+  content: '';
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10000;
+  inset: 0;
+  z-index: -1;
   pointer-events: none;
-  overflow: hidden;
-}
-.page-transition.active { pointer-events: all; }
-
-/* The water wall */
-.water-wall {
-  position: absolute;
-  top: -5%;
-  width: 120%;
-  height: 110%;
   background: linear-gradient(
-    135deg,
-    var(--midnight) 0%,
-    var(--abyss) 30%,
-    var(--deep) 60%,
-    var(--midnight) 100%
-  );
-  transform: translateX(-110%);
-  will-change: transform;
-}
-.water-wall::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -40px;
-  width: 80px;
-  height: 100%;
-  background: linear-gradient(to right,
-    rgba(0, 229, 200, 0.06),
-    rgba(0, 229, 200, 0.12),
-    rgba(34, 211, 238, 0.08),
-    rgba(0, 229, 200, 0.04),
-    transparent
-  );
-  filter: blur(4px);
-}
-.water-wall::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -8px;
-  width: 16px;
-  height: 100%;
-  background: linear-gradient(to right,
-    rgba(0, 229, 200, 0.2),
-    rgba(0, 229, 200, 0.05),
-    transparent
+    to bottom,
+    var(--depth-top) 0%,
+    var(--depth-mid) 35%,
+    var(--depth-deep) 70%,
+    var(--depth-floor) 100%
   );
 }
 
-/* Bubble particles inside the transition */
-.water-wall .transition-bubble {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(34, 211, 238, 0.2);
-  background: radial-gradient(circle at 30% 30%, rgba(34, 211, 238, 0.1), transparent);
+/* Page header sits at the "surface" of this column */
+body[data-depth] .page-header {
+  background: transparent;
+  position: relative;
+}
+body[data-depth] .page-header .hero-bg {
+  opacity: 0.5;
 }
 
-/* Swipe directions */
-.page-transition.swipe-right .water-wall {
-  transform: translateX(-110%);
-  animation: waterSwipeRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+/* Sections go transparent so the body gradient shows through */
+body[data-depth] section {
+  background: transparent;
 }
-.page-transition.swipe-left .water-wall {
-  left: auto;
-  right: 0;
-  transform: translateX(110%);
-  animation: waterSwipeLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+/* Alternating sections get a subtle darkening overlay for visual separation */
+body[data-depth] section[style*="background: var(--deep)"],
+body[data-depth] section[style*="background: var(--abyss)"] {
+  background: rgba(0,0,0,0.12) !important;
 }
-.page-transition.swipe-left .water-wall::before,
-.page-transition.swipe-left .water-wall::after {
-  right: auto;
-  left: -40px;
-  background: linear-gradient(to left,
-    rgba(0, 229, 200, 0.06),
-    rgba(0, 229, 200, 0.12),
-    rgba(34, 211, 238, 0.08),
-    rgba(0, 229, 200, 0.04),
-    transparent
-  );
-}
-.page-transition.swipe-left .water-wall::after {
-  left: -8px;
-  width: 16px;
-  background: linear-gradient(to left,
-    rgba(0, 229, 200, 0.2),
-    rgba(0, 229, 200, 0.05),
-    transparent
-  );
+body[data-depth] #about { background: transparent; }
+body[data-depth] #requirements { background: rgba(0,0,0,0.1); }
+body[data-depth] #architecture { background: transparent; }
+body[data-depth] .features-section { background: transparent; }
+body[data-depth] .testimonial-section { background: transparent; border-color: rgba(0,229,200,0.04); }
+body[data-depth] .stats-strip { background: rgba(0,0,0,0.15); }
+
+/* CTA section sits deeper — subtle darkening */
+body[data-depth] .cta-section {
+  background: rgba(0,0,0,0.2);
+  border-top-color: rgba(0,229,200,0.04);
 }
 
-@keyframes waterSwipeRight {
-  0% { transform: translateX(-110%); }
-  45% { transform: translateX(0%); }
-  55% { transform: translateX(0%); }
-  100% { transform: translateX(110%); }
-}
-@keyframes waterSwipeLeft {
-  0% { transform: translateX(110%); }
-  45% { transform: translateX(0%); }
-  55% { transform: translateX(0%); }
-  100% { transform: translateX(-110%); }
+/* Footer sits at the deepest point */
+body[data-depth] footer {
+  background: rgba(0,0,0,0.25);
+  border-top-color: rgba(255,255,255,0.03);
 }
 
-/* Page content fade during transition */
-body.transitioning .snap-container,
-body.transitioning > :not(.page-transition):not(nav) {
-  animation: contentFade 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+/* Page entrance fade */
+body.page-enter {
+  animation: depthFadeIn 0.5s ease-out forwards;
 }
-@keyframes contentFade {
-  0% { opacity: 1; }
-  30% { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-/* Entrance animation when arriving on a page */
-body.page-enter .snap-container,
-body.page-enter > :not(.page-transition):not(nav) {
-  animation: contentEnter 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-@keyframes contentEnter {
-  0% { opacity: 0; transform: translateX(30px); }
-  100% { opacity: 1; transform: translateX(0); }
+@keyframes depthFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 /* ── RESPONSIVE ── */
