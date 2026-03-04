@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CETIS Features | Tidepool Scientific</title>
+  <meta name="description" content="Explore the comprehensive features of CETIS: statistical analysis, decision-tree automation, WET evaluation, quality control, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__brand">
+      <svg viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="18" fill="#0c2d48"/><path d="M10 24c2-4 5-12 8-12s4 6 6 4 3-6 3-6" stroke="#4db6f5" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="10" cy="24" r="2" fill="#26a69a"/><circle cx="18" cy="12" r="2" fill="#26a69a"/><circle cx="27" cy="10" r="2" fill="#26a69a"/></svg>
+      CETIS <span>by Tidepool</span>
+    </a>
+    <button class="navbar__toggle" onclick="document.querySelector('.navbar__links').classList.toggle('open')" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <ul class="navbar__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="AboutCetis.html">About</a></li>
+      <li><a href="cetisfeatures.html" class="active">Features</a></li>
+      <li><a href="cetisstats.html">Statistics</a></li>
+      <li><a href="cetisfaq.html">FAQ</a></li>
+      <li><a href="CetisNewsAndUpdates.html">Updates</a></li>
+      <li><a href="CetisTestimonials.html">Testimonials</a></li>
+      <li><a href="CetisClientList.html">Clients</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero hero--compact">
+  <div class="container">
+    <span class="section-label" style="color: var(--teal-500);">Features</span>
+    <h1>Software Features</h1>
+    <p>Everything you need to analyze, manage, and report environmental toxicity data in one comprehensive application.</p>
+  </div>
+</section>
+
+<!-- Decision-Tree Automation -->
+<section class="section">
+  <div class="container">
+    <div class="feature-row">
+      <div>
+        <span class="section-label">Core Feature</span>
+        <h2>Decision-Tree Automation</h2>
+        <p>CETIS implements decision-making logic that makes most, if not all, decisions for you in terms of selecting the correct statistical method and verifying that all assumptions are met.</p>
+        <ul class="feature-list mt-4">
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg>
+            Customizable decision trees for different regulatory authorities
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg>
+            Consistent with U.S. EPA and Environment Canada guidelines
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg>
+            Override any automated decision and select methods manually
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z"/></svg>
+            Multi-jurisdictional support for rapid rule-switching
+          </li>
+        </ul>
+      </div>
+      <div style="background: linear-gradient(135deg, var(--blue-100), var(--teal-100)); border-radius: var(--radius-xl); padding: var(--sp-8); display: flex; flex-direction: column; justify-content: center; gap: var(--sp-4);">
+        <div style="background: var(--white); border-radius: var(--radius-md); padding: var(--sp-4); box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: var(--sp-3);">
+          <div style="width:10px; height:10px; border-radius:50%; background: var(--teal-500);"></div>
+          <span style="font-size:.9rem; font-weight:600;">1. Check normality assumptions</span>
+        </div>
+        <div style="text-align: center; color: var(--gray-400);">&darr;</div>
+        <div style="background: var(--white); border-radius: var(--radius-md); padding: var(--sp-4); box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: var(--sp-3);">
+          <div style="width:10px; height:10px; border-radius:50%; background: var(--blue-600);"></div>
+          <span style="font-size:.9rem; font-weight:600;">2. Verify variance homogeneity</span>
+        </div>
+        <div style="text-align: center; color: var(--gray-400);">&darr;</div>
+        <div style="background: var(--white); border-radius: var(--radius-md); padding: var(--sp-4); box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: var(--sp-3);">
+          <div style="width:10px; height:10px; border-radius:50%; background: var(--green-600);"></div>
+          <span style="font-size:.9rem; font-weight:600;">3. Select optimal statistical method</span>
+        </div>
+        <div style="text-align: center; color: var(--gray-400);">&darr;</div>
+        <div style="background: var(--white); border-radius: var(--radius-md); padding: var(--sp-4); box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: var(--sp-3);">
+          <div style="width:10px; height:10px; border-radius:50%; background: var(--amber-600);"></div>
+          <span style="font-size:.9rem; font-weight:600;">4. Generate compliant report</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Statistical Analysis -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Analysis</span>
+      <h2>Statistical Analysis</h2>
+      <p>A full suite of advanced statistical methods for hypothesis testing and point estimation.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card animate-in">
+        <div class="card__icon card__icon--blue">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 5 5-9"/></svg>
+        </div>
+        <h3>Linear Regression (MLE)</h3>
+        <p>Four models including Log-Cumulative Normal (Probit Analysis), Log-Logit, Log-Gompertz, and Log-Angle. Emulates U.S. EPA Probit software and SAS Probit procedure.</p>
+      </div>
+      <div class="card animate-in">
+        <div class="card__icon card__icon--teal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>
+        </div>
+        <h3>Non-Linear Regression</h3>
+        <p>41 different models including Logistic, Log-Logistic, Cumulative Normal, Gompertz, Weibull, Morgan-Mercer-Flodin, and models with hormesis factors.</p>
+      </div>
+      <div class="card animate-in">
+        <div class="card__icon card__icon--green">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
+        </div>
+        <h3>Residual Analysis</h3>
+        <p>Thorough residual analysis using Pearson chi-square, likelihood ratio, ANOVA lack of fit, Shapiro-Wilk, Anderson-Darling, Bartlett, Brown-Forsythe Levene, and more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WET Evaluation -->
+<section class="section">
+  <div class="container">
+    <div class="feature-row feature-row--reverse">
+      <div>
+        <span class="section-label">Compliance</span>
+        <h2>WET Evaluation &amp; Reporting</h2>
+        <p>The CETIS WET Evaluation report is a special report type that assesses a Whole Effluent Toxicity test for compliance with established IWC (Instream Waste Concentration) criteria and test acceptability criteria.</p>
+        <p>CETIS considers the WET test regulatorily significant if the calculated index of toxicity is less than or equal to the permitted IWC.</p>
+        <p class="mt-4"><strong>New:</strong> U.S. EPA Test for Significant Toxicity (TST) using Welch's t Test &mdash; a bioequivalence approach that controls the false negative rate.</p>
+      </div>
+      <div style="background: linear-gradient(135deg, var(--green-100), var(--teal-100)); border-radius: var(--radius-xl); padding: var(--sp-8); display: flex; align-items: center; justify-content: center; min-height: 280px;">
+        <div style="text-align: center;">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--teal-700)" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
+          <div style="margin-top: var(--sp-3); font-weight: 700; color: var(--teal-700); font-size: 1.1rem;">WET Compliance<br>Assessment</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quality Control -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">QC</span>
+      <h2>Quality Control</h2>
+      <p>Three types of quality control plots to monitor your laboratory's reference toxicant performance.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card animate-in text-center">
+        <h3>Levey-Jennings</h3>
+        <p>Shewhart-type control charts for monitoring test precision and accuracy over time.</p>
+      </div>
+      <div class="card animate-in text-center">
+        <h3>Cumulative Mean</h3>
+        <p>Track the running mean of your reference toxicant data to identify long-term trends.</p>
+      </div>
+      <div class="card animate-in text-center">
+        <h3>CUSUM Plot</h3>
+        <p>New two-sided CUSUM plot helps detect subtle trends and shifts in your data over time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Database & Architecture -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Architecture</span>
+      <h2>Database &amp; Architecture</h2>
+    </div>
+    <div class="grid-2">
+      <div class="card animate-in">
+        <h3>File-Server Architecture</h3>
+        <p>CETIS uses a split database design &mdash; the front-end application runs on each workstation while the back-end database resides on a shared drive. This allows simultaneous multi-user access across your network.</p>
+      </div>
+      <div class="card animate-in">
+        <h3>Data Security</h3>
+        <p>MD5 hash digests are calculated and stored for all datasets, ensuring data integrity and providing an audit trail for regulatory compliance.</p>
+      </div>
+      <div class="card animate-in">
+        <h3>Productivity Tools</h3>
+        <p>Pop-up calendars, calculators, rapid data entry, Office Ribbon UI, and improved native filtering and exporting capabilities.</p>
+      </div>
+      <div class="card animate-in">
+        <h3>Broad Compatibility</h3>
+        <p>Runs on Access 2010, 2013, 2016, 2019, 2021, and Microsoft 365 &mdash; both x64 and x86 versions supported.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="cta">
+      <h2>See the Statistics in Action</h2>
+      <p>Dive into the comprehensive statistical methods available in CETIS.</p>
+      <div class="btn-group">
+        <a href="cetisstats.html" class="btn btn--primary">Statistical Methods</a>
+        <a href="cetisfaq.html" class="btn btn--outline">View FAQ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">CETIS <span>by Tidepool</span></div>
+        <p style="font-size:.9rem; max-width:300px;">Since 1992, Tidepool Scientific Software has been committed to developing biostatistical software for the environmental toxicology community.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="AboutCetis.html">About CETIS</a></li>
+          <li><a href="cetisfeatures.html">Features</a></li>
+          <li><a href="cetisstats.html">Statistical Methods</a></li>
+          <li><a href="CetisNewsAndUpdates.html">News &amp; Updates</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="cetisfaq.html">FAQ</a></li>
+          <li><a href="CetisTestimonials.html">Testimonials</a></li>
+          <li><a href="CetisClientList.html">Client List</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://tidepool-scientific.com/About/">About Tidepool</a></li>
+          <li><a href="https://tidepool-scientific.com/">Tidepool Home</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <span>&copy; 2025 Tidepool Scientific Software, LLC. McKinleyville, CA.</span>
+      <span>CETIS v2.1.6</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
+});
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.style.animationPlayState = 'running'; });
+}, { threshold: 0.15 });
+document.querySelectorAll('.animate-in').forEach(el => {
+  el.style.animationPlayState = 'paused';
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>

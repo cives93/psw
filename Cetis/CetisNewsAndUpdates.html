@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CETIS News &amp; Updates | Tidepool Scientific</title>
+  <meta name="description" content="Latest news, version updates, and upcoming features for CETIS environmental toxicity software.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__brand">
+      <svg viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="18" fill="#0c2d48"/><path d="M10 24c2-4 5-12 8-12s4 6 6 4 3-6 3-6" stroke="#4db6f5" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="10" cy="24" r="2" fill="#26a69a"/><circle cx="18" cy="12" r="2" fill="#26a69a"/><circle cx="27" cy="10" r="2" fill="#26a69a"/></svg>
+      CETIS <span>by Tidepool</span>
+    </a>
+    <button class="navbar__toggle" onclick="document.querySelector('.navbar__links').classList.toggle('open')" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <ul class="navbar__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="AboutCetis.html">About</a></li>
+      <li><a href="cetisfeatures.html">Features</a></li>
+      <li><a href="cetisstats.html">Statistics</a></li>
+      <li><a href="cetisfaq.html">FAQ</a></li>
+      <li><a href="CetisNewsAndUpdates.html" class="active">Updates</a></li>
+      <li><a href="CetisTestimonials.html">Testimonials</a></li>
+      <li><a href="CetisClientList.html">Clients</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero hero--compact">
+  <div class="container">
+    <span class="section-label" style="color: var(--teal-500);">Updates</span>
+    <h1>News &amp; Updates</h1>
+    <p>Stay current with the latest CETIS releases, features, and upcoming developments.</p>
+  </div>
+</section>
+
+<!-- Highlight: Enterprise -->
+<section class="section">
+  <div class="container">
+    <div class="card" style="border-left: 4px solid var(--blue-600); max-width: 800px; margin: 0 auto;">
+      <span class="section-label">Coming Soon</span>
+      <h2 style="margin-top: var(--sp-2);">CETIS Enterprise</h2>
+      <p style="font-size: 1.05rem; margin-top: var(--sp-4);">A new version of CETIS is being developed that will support <strong>hundreds of simultaneous users</strong>, <strong>millions of records</strong>, and <strong>remote access</strong>, while implementing mission-critical database management of your toxicity data.</p>
+      <p>The new version will use various versions of <strong>SQL Server</strong> and even <strong>Azure SQL</strong>, enabling cloud-based deployments and enterprise-scale operations.</p>
+      <div class="grid-3 mt-8" style="gap: var(--sp-4);">
+        <div style="text-align: center; padding: var(--sp-4); background: var(--blue-100); border-radius: var(--radius-md);">
+          <div style="font-size: 1.8rem; font-weight: 800; color: var(--blue-700); font-family: var(--font-display);">100s</div>
+          <div style="font-size: .85rem; color: var(--gray-600);">Simultaneous Users</div>
+        </div>
+        <div style="text-align: center; padding: var(--sp-4); background: var(--teal-100); border-radius: var(--radius-md);">
+          <div style="font-size: 1.8rem; font-weight: 800; color: var(--teal-700); font-family: var(--font-display);">M+</div>
+          <div style="font-size: .85rem; color: var(--gray-600);">Records Supported</div>
+        </div>
+        <div style="text-align: center; padding: var(--sp-4); background: var(--green-100); border-radius: var(--radius-md);">
+          <div style="font-size: 1.8rem; font-weight: 800; color: var(--green-600); font-family: var(--font-display);">Cloud</div>
+          <div style="font-size: .85rem; color: var(--gray-600);">Azure SQL Ready</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Version Timeline -->
+<section class="section section--alt">
+  <div class="container" style="max-width: 800px;">
+    <div class="section-header">
+      <span class="section-label">Timeline</span>
+      <h2>Release History</h2>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline__item">
+        <div class="timeline__date">Latest Release</div>
+        <h3>CETIS v2.1.6.xx</h3>
+        <p>The biggest change to the user interface since the introduction of CETIS over 20 years ago. CETIS now implements the <strong>Office Ribbon UI</strong> with improved native filtering and exporting capabilities. A dramatically redesigned interface increases efficiency and ease of use.</p>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__date">Security Update</div>
+        <h3>CETIS v2.1.3.0 &ndash; TLS 1.2 Update</h3>
+        <p>Versions prior to v2.1.3.0 used a version of QLM that required TLS 1.1 for license server communication. As web hosting services abandoned TLS 1.0 and 1.1, CETIS was rewritten with TLS 1.2&ndash;capable QLM v16, incorporating a more capable Soraco-designed wizard for both online and offline activation or deactivation.</p>
+        <p style="margin-top: var(--sp-2); font-weight: 600; color: var(--blue-700);">Users are advised to update as soon as possible. Free updates for purchases less than one year old.</p>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__date">Major Release</div>
+        <h3>CETIS v2.1 &ndash; 64-bit Support</h3>
+        <p>You asked for 64-bit compatible CETIS and now you got it! Version 2.1 introduced full 64-bit compatibility alongside the newly designed user interface that dramatically increases efficiency and ease of use. CETIS now runs on Access 2010, 2013, 2016, 2019, 2021, and Microsoft 365.</p>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__date">Enhancement</div>
+        <h3>EPA TST Method Added</h3>
+        <p>Added the new U.S. EPA Test for Significant Toxicity (TST) using Welch's t Test &mdash; a bioequivalence approach that controls the false negative rate for more reliable toxicity determinations.</p>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__date">Enhancement</div>
+        <h3>Ratio Tests &amp; Comparison Methods</h3>
+        <p>New implementation of the Robertson and Preisler ratio test and the Zajdlik two-sample Z test for comparing two different point estimates.</p>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__date">Enhancement</div>
+        <h3>Data Security Improvements</h3>
+        <p>New data security measures implemented including the calculation and storage of MD5 hash digests of datasets for data integrity verification.</p>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__date">Enhancement</div>
+        <h3>CUSUM Quality Control Plot</h3>
+        <p>A new two-sided CUSUM plot was added to the quality control toolkit, helping labs detect subtle trends in their reference toxicant data.</p>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__date">Support</div>
+        <h3>Self-Help Portal</h3>
+        <p>A standalone QLM Wizard and Self-Help Portal were added to the website under the Support menu for legacy users needing license management assistance.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta">
+      <h2>Ready to Upgrade?</h2>
+      <p>If your purchase was less than one year ago, you are entitled to a free update to the latest version.</p>
+      <div class="btn-group">
+        <a href="cetisfeatures.html" class="btn btn--primary">View Features</a>
+        <a href="cetisfaq.html" class="btn btn--outline">FAQ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">CETIS <span>by Tidepool</span></div>
+        <p style="font-size:.9rem; max-width:300px;">Since 1992, Tidepool Scientific Software has been committed to developing biostatistical software for the environmental toxicology community.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="AboutCetis.html">About CETIS</a></li>
+          <li><a href="cetisfeatures.html">Features</a></li>
+          <li><a href="cetisstats.html">Statistical Methods</a></li>
+          <li><a href="CetisNewsAndUpdates.html">News &amp; Updates</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="cetisfaq.html">FAQ</a></li>
+          <li><a href="CetisTestimonials.html">Testimonials</a></li>
+          <li><a href="CetisClientList.html">Client List</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://tidepool-scientific.com/About/">About Tidepool</a></li>
+          <li><a href="https://tidepool-scientific.com/">Tidepool Home</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <span>&copy; 2025 Tidepool Scientific Software, LLC. McKinleyville, CA.</span>
+      <span>CETIS v2.1.6</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
+});
+</script>
+
+</body>
+</html>
